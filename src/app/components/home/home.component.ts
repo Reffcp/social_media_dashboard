@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SocialMediaDataService } from '../../core/services/social-media-data.service';
+import { SocialMediaDataInterface } from '../../shared/interfaces/social-media-data.interface';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +11,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   activeDarkMode = false;
+  socialMediaData: SocialMediaDataInterface = {} as SocialMediaDataInterface;
+
+  constructor(private smdService: SocialMediaDataService) {}
 
   ngOnInit() {
     const darkMode = localStorage.getItem('dark-mode');
@@ -16,6 +21,15 @@ export class HomeComponent implements OnInit {
       document.body.classList.add('dark-mode');
       this.activeDarkMode = true;
     }
+    this.getSocialMediaData();
+  }
+
+  getSocialMediaData() {
+    this.smdService
+      .getSocialMediaData()
+      .subscribe((data: SocialMediaDataInterface) => {
+        this.socialMediaData = data;
+      });
   }
 
   toggleDarkMode() {
