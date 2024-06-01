@@ -2,7 +2,7 @@
   <div class="row d-flex justify-content-center">
     <div class="col-lg-10 col-md-9 col-7 mt-2">
       <h2 class="fs-2">Social Media Dashboard</h2>
-      <span>Total de seguidores: 23,004</span>
+      <span>Total de seguidores: {{totalGolbalFollowers | number}}</span>
     </div>
     <div
       class="col-lg-2 col-md-3 col-5 mt-2 row d-flex justify-content-center align-items-center"
@@ -22,19 +22,43 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-4">
-      <div class="card" style="width: 18rem">
-        <img src="..." class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+  <div class="row mt-4" *ngIf="socialMediaData.top_data">
+    <div class="col col-lg-3 mt-2">
+      <app-card-social-media
+        [username]="socialMediaData.top_data.facebook.username"
+        [cardBorderTop]="socialRedBorderTop.Facebook"
+        [fontAwesomeIcon]="socialRedIcon.Facebook"
+        [totalFollowers]="socialMediaData.top_data.facebook.total_followers"
+        [newFollowers]="socialMediaData.top_data.facebook.new_followers"
+      >
+      </app-card-social-media>
+    </div>
+    <div class="col col-lg-3 mt-2">
+      <app-card-social-media
+        [username]="socialMediaData.top_data.instagram.username"
+        [cardBorderTop]="socialRedBorderTop.Instagram"
+        [fontAwesomeIcon]="socialRedIcon.Instagram"
+        [totalFollowers]="socialMediaData.top_data.instagram.total_followers"
+        [newFollowers]="socialMediaData.top_data.instagram.new_followers"
+      ></app-card-social-media>
+    </div>
+    <div class="col col-lg-3 mt-2">
+      <app-card-social-media
+        [username]="socialMediaData.top_data.twitter.username"
+        [cardBorderTop]="socialRedBorderTop.Twitter"
+        [fontAwesomeIcon]="socialRedIcon.Twitter"
+        [totalFollowers]="socialMediaData.top_data.twitter.total_followers"
+        [newFollowers]="socialMediaData.top_data.twitter.new_followers"
+      ></app-card-social-media>
+    </div>
+    <div class="col col-lg-3 mt-2">
+      <app-card-social-media
+        [username]="socialMediaData.top_data.youtube.username"
+        [cardBorderTop]="socialRedBorderTop.Youtube"
+        [fontAwesomeIcon]="socialRedIcon.Youtube"
+        [totalFollowers]="socialMediaData.top_data.youtube.total_followers"
+        [newFollowers]="socialMediaData.top_data.youtube.new_followers"
+      ></app-card-social-media>
     </div>
   </div>
 </div>

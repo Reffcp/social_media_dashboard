@@ -10,6 +10,6 @@ export class SocialMediaDataService {
   constructor(private db: AngularFireDatabase) { }
 
   getSocialMediaData(): Observable<any> {
-    return this.db.list('/social_media_dashboard').valueChanges();
+    return this.db.list('/').valueChanges();
   }
 }

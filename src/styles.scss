@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
-@import "assets/scss/variables";
+@import "assets/styles/scss/variables";
 @import "bootstrap/scss/bootstrap";
-@import "assets/scss/custom.scss";
+@import "assets/styles/scss/custom.scss";
 
 // src/styles/styles.scss
 
@@ -56,23 +56,6 @@ a {
 .btn-secondary {
   background-color: var(--secondary);
   border-color: var(--secondary);
-}
+} 
 
-/* Estilos para las tarjetas */
-.card {
-  background-color: var(--card-bg);
-  border-color: var(--card-border-color);
-  color: var(--card-text-color);
-}
-
-.card-header {
-  background-color: var(--card-bg);
-  border-color: var(--card-border-color);
-  color: var(--card-text-color);
-}
-
-.card-footer {
-  background-color: var(--card-bg);
-  border-color: var(--card-border-color);
-  color: var(--card-text-color);
-}
+@import "assets/styles/scss/bootstrap/card.scss";

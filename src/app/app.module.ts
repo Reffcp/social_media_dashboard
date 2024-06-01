@@ -9,9 +9,11 @@ import { SocialMediaDataService } from './core/services/social-media-data.servic
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { SharedModule } from './shared/shared.module';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -19,10 +21,11 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
     NgbModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
+    SharedModule,
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },
-    SocialMediaDataService,
+    SocialMediaDataService, 
   ],
   bootstrap: [AppComponent],
 })

@@ -1,0 +1,33 @@
+/* Estilos para las tarjetas */
+
+:root {
+  --card-bg: var(--light);
+  --card-border-color: var(--secondary);
+  --card-text-color: var(--text-color);
+}
+
+body.dark-mode {
+  --card-bg: var(--dark);
+  --card-border-color: var(--secondary);
+  --card-text-color: var(--text-color);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-color: var(--card-border-color);
+  color: var(--card-text-color);
+  border: none !important;
+}
+
+.card-header {
+  background-color: var(--card-bg);
+  border-color: var(--card-border-color);
+  color: var(--card-text-color);
+}
+
+.card-footer {
+  background-color: var(--card-bg);
+  border-color: var(--card-border-color);
+  color: var(--card-text-color);
+}
+
