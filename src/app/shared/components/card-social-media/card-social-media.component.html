@@ -1,0 +1,20 @@
+<div [class]="'card ' + cardBorderTop">
+  <div class="card-body">
+    <h5 class="card-title text-center">
+      <!-- icon fontawesome -->
+      <i [class]="fontAwesomeIcon"></i>
+      &nbsp;
+      <span>{{ username }}</span>
+    </h5>
+    <p class="card-text text-center">
+      <span class="fs-1">{{ totalFollowers | number }}</span>
+      <br />
+      <br />
+      <span class="followers-text fs-6">Seguidores</span>
+      <br />
+      <span [class]="newFollowesClass">{{
+        asciiUpDowmFollowers + " " + newFollowers + " Hoy"
+      }}</span>
+    </p>
+  </div>
+</div>

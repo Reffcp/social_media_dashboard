@@ -1,0 +1,22 @@
+// src/styles/custom-font-sizes.scss
+
+// Tamaño de fuente para pantallas pequeñas
+@media (max-width: 767px) {
+  .fs-2 {
+    font-size: 1.2rem !important;
+  }
+}
+
+// Tamaño de fuente para pantallas medianas
+@media (min-width: 768px) {
+  .fs-2 {
+    font-size: 2rem !important;
+  }
+}
+
+// Tamaño de fuente para pantallas grandes
+@media (min-width: 992px) {
+  .fs-2 {
+    font-size: 2rem !important;
+  }
+}
