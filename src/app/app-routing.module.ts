@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NavigationError, Router, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+
+const url404 = 'https://reffcp.github.io/404-not-found/';
 
 const routes: Routes = [
   {
@@ -8,14 +10,26 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: HomeComponent
-      }
-    ]
-  }
+        component: HomeComponent,
+      },
+    ],
+  },
+  {
+    path: '**',
+    redirectTo: url404,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  constructor(private router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationError) {
+        window.location.href = url404;
+      }
+    });
+  }
+}
