@@ -2,7 +2,7 @@
   <div class="row d-flex justify-content-center">
     <div class="col-lg-10 col-md-9 col-7 mt-2">
       <h2 class="fs-2">Social Media Dashboard</h2>
-      <span>Total de seguidores: {{totalGolbalFollowers | number}}</span>
+      <span>Total de seguidores: {{ totalGolbalFollowers | number }}</span>
     </div>
     <div
       class="col-lg-2 col-md-3 col-5 mt-2 row d-flex justify-content-center align-items-center"
@@ -23,7 +23,7 @@
     </div>
   </div>
   <div class="row mt-4" *ngIf="socialMediaData.top_data">
-    <div class="col col-lg-3 mt-2">
+    <div class="col col-lg-3 mt-3">
       <app-card-social-media
         [username]="socialMediaData.top_data.facebook.username"
         [cardBorderTop]="socialRedBorderTop.Facebook"
@@ -33,7 +33,7 @@
       >
       </app-card-social-media>
     </div>
-    <div class="col col-lg-3 mt-2">
+    <div class="col col-lg-3 mt-3">
       <app-card-social-media
         [username]="socialMediaData.top_data.instagram.username"
         [cardBorderTop]="socialRedBorderTop.Instagram"
@@ -42,7 +42,7 @@
         [newFollowers]="socialMediaData.top_data.instagram.new_followers"
       ></app-card-social-media>
     </div>
-    <div class="col col-lg-3 mt-2">
+    <div class="col col-lg-3 mt-3">
       <app-card-social-media
         [username]="socialMediaData.top_data.twitter.username"
         [cardBorderTop]="socialRedBorderTop.Twitter"
@@ -51,7 +51,7 @@
         [newFollowers]="socialMediaData.top_data.twitter.new_followers"
       ></app-card-social-media>
     </div>
-    <div class="col col-lg-3 mt-2">
+    <div class="col col-lg-3 mt-3">
       <app-card-social-media
         [username]="socialMediaData.top_data.youtube.username"
         [cardBorderTop]="socialRedBorderTop.Youtube"
@@ -59,6 +59,93 @@
         [totalFollowers]="socialMediaData.top_data.youtube.total_followers"
         [newFollowers]="socialMediaData.top_data.youtube.new_followers"
       ></app-card-social-media>
+    </div>
+  </div>
+  <div class="row mt-4 d-flex justify-content-center">
+    <div class="col-lg-10 col-md-9 col-10 mt-2">
+      <h2 class="fs-3">Overview - Today</h2>
+    </div>
+    <div
+      class="col-lg-2 col-md-3 col-2 mt-2 row d-flex justify-content-center align-items-center"
+    ></div>
+  </div>
+  <div class="row mt-2">
+    <div class="col col-lg-3 mt-2">
+      <app-card-likes
+        [title]="'Page Views'"
+        [fontAwesomeIcon]="socialRedIcon.Facebook"
+        [total]="
+          socialMediaData.overview_today.facebook.page_viewers
+            .total_page_viewers
+        "
+        [counter]="
+          socialMediaData.overview_today.facebook.page_viewers.new_page_viewers
+        "
+      ></app-card-likes>
+    </div>
+    <div class="col col-lg-3 mt-2">
+      <app-card-likes
+        [title]="'Likes'"
+        [fontAwesomeIcon]="socialRedIcon.Facebook"
+        [total]="socialMediaData.overview_today.facebook.likes.total_likes"
+        [counter]="socialMediaData.overview_today.facebook.likes.new_likes"
+      ></app-card-likes>
+    </div>
+    <div class="col col-lg-3 mt-2">
+      <app-card-likes
+        [title]="'Likes'"
+        [fontAwesomeIcon]="socialRedIcon.Instagram"
+        [total]="socialMediaData.overview_today.instagram.likes.total_likes"
+        [counter]="socialMediaData.overview_today.instagram.likes.new_likes"
+      ></app-card-likes>
+    </div>
+    <div class="col col-lg-3 mt-2">
+      <app-card-likes
+        [title]="'Page Views'"
+        [fontAwesomeIcon]="socialRedIcon.Instagram"
+        [total]="socialMediaData.overview_today.instagram.page_viewers.total_page_viewers"
+        [counter]="socialMediaData.overview_today.instagram.page_viewers.new_page_viewers"
+      ></app-card-likes>
+    </div>
+    <div class="col col-lg-3 mt-2">
+      <app-card-likes
+        [title]="'Retweets'"
+        [fontAwesomeIcon]="socialRedIcon.Twitter"
+        [total]="
+          socialMediaData.overview_today.twitter.page_viewers.total_page_viewers
+        "
+        [counter]="
+          socialMediaData.overview_today.twitter.page_viewers.new_page_viewers
+        "
+      ></app-card-likes>
+    </div>
+    <div class="col col-lg-3 mt-2">
+      <app-card-likes
+        [title]="'Likes'"
+        [fontAwesomeIcon]="socialRedIcon.Twitter"
+        [total]="socialMediaData.overview_today.twitter.likes.total_likes"
+        [counter]="socialMediaData.overview_today.twitter.likes.new_likes"
+      ></app-card-likes>
+    </div>
+    <div class="col col-lg-3 mt-2">
+      <app-card-likes
+        [title]="'Likes'"
+        [fontAwesomeIcon]="socialRedIcon.Youtube"
+        [total]="socialMediaData.overview_today.youtube.likes.total_likes"
+        [counter]="socialMediaData.overview_today.youtube.likes.new_likes"
+      ></app-card-likes>
+    </div>
+    <div class="col col-lg-3 mt-2">
+      <app-card-likes
+        [title]="'Total Views'"
+        [fontAwesomeIcon]="socialRedIcon.Youtube"
+        [total]="
+          socialMediaData.overview_today.youtube.page_viewers.total_page_viewers
+        "
+        [counter]="
+          socialMediaData.overview_today.youtube.page_viewers.new_page_viewers
+        "
+      ></app-card-likes>
     </div>
   </div>
 </div>

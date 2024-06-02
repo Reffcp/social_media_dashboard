@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-7">
+          <span>{{title}}</span>
+        </div>
+        <div class="col-5 text-end">
+          <i [class]="fontAwesomeIcon"></i>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-7">
+          <span class="fs-1">{{ total | number }}</span>
+        </div>
+        <div class="col-5 text-end row m-0 p-0 d-flex align-items-center">
+          <span [class]="newFollowesClass">{{
+            asciiUpDowmFollowers + " " + counter
+          }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
