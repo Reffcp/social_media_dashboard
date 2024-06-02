@@ -1,27 +1,48 @@
-# SocialMediaDashboard
+# Social Media Dashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+Este proyecto es un Social Media Dashboard que muestra información de diferentes redes sociales. Puedes ver una versión desplegada del proyecto [aquí](https://reffcp-social-media-dashboard.web.app/#/).
 
-## Development server
+## Descripción
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+El Social Media Dashboard es una aplicación web que te permite visualizar métricas y estadísticas simuladas de perfiles en redes sociales. Proporciona información almacenada en Firebase por medio de realtime database.
 
-## Code scaffolding
+## Características
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Visualización de métricas de diferentes redes sociales.
+- Gráficos interactivos para analizar el rendimiento.
+- Integración con Firebase para el despliegue automático.
 
-## Build
+## Tecnologías utilizadas
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Angular 17
+- HTML
+- CSS
+- TypeScript
+- Firebase
+- Bootstrap 5
+- Fontawesome
 
-## Running unit tests
+## Instalación
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clona este repositorio en tu máquina local.
+2. Ejecuta el comando `npm i` para instalar las dependencias
+3. Ejecuta `ng serve` (requiere angular-cli)
 
-## Running end-to-end tests
+## Uso
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Abre la aplicación en tu navegador.
+2. Explora los diferentes gráficos e información disponible.
 
-## Further help
+## Contribución
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Si deseas contribuir a este proyecto, sigue estos pasos:
+
+1. Haz un fork de este repositorio.
+2. Crea una rama con tu nueva funcionalidad (`git checkout -b nueva-funcionalidad`).
+3. Realiza tus cambios y haz commit (`git commit -m "Agrega nueva funcionalidad"`).
+4. Sube tus cambios a tu repositorio remoto (`git push origin nueva-funcionalidad`).
+5. Abre un pull request en este repositorio.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Puedes ver más detalles en el archivo [LICENSE](LICENSE).
