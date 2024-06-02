@@ -2,19 +2,19 @@
   <div class="card-body">
     <div class="container">
       <div class="row">
-        <div class="col-7">
+        <div class="col-8 col-md-7">
           <span>{{title}}</span>
         </div>
-        <div class="col-5 text-end">
+        <div class="col-4 col-md-5 text-end">
           <i [class]="fontAwesomeIcon"></i>
         </div>
       </div>
       <div class="row">
         <div class="col-7">
-          <span class="fs-1">{{ total | number }}</span>
+          <span class="fs-5">{{ total | number }}</span>
         </div>
         <div class="col-5 text-end row m-0 p-0 d-flex align-items-center">
-          <span [class]="newFollowesClass">{{
+          <span class="p-0" [class]="newFollowesClass">{{
             asciiUpDowmFollowers + " " + counter
           }}</span>
         </div>
