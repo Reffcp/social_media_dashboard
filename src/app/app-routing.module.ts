@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { NavigationError, Router, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-
-const url404 = 'https://reffcp.github.io/404-not-found/';
+// utilizamos mainUrlThisApp para obtener la url completa de la app
+const mainUrlThisApp = window.location.origin;
+const url404 =
+  'https://reffcp.github.io/404-not-found/?pathOrigin=' + mainUrlThisApp;
 
 const routes: Routes = [
   {
